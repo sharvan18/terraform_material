@@ -1,0 +1,6 @@
+#in the visual studio code terminal only you need to run this command
+mkdir ssh-keys                                                                                                       
+cd .\ssh-keys\     
+  ###when you are running ssh-keygen command just press enter enter and enter do not give any pass pharase
+ssh-keygen -m PEM -t rsa -b 4096 -C "azureuser@myserver" -f terraform-azure.pem                                      
+cd ..               

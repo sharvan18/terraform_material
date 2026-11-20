@@ -1,0 +1,31 @@
+#create a new file publicip.tf copy from line 2 till 10
+  resource "azurerm_public_ip" "web_pip" {
+  for_each             = var.subnets
+  name                 = "pip-${each.key}"
+  resource_group_name  = azurerm_resource_group.myrg.name
+    location            = azurerm_resource_group.myrg.location
+  allocation_method    = "Static"
+  sku                  = "Standard"
+  tags = local.project_tags
+}
+
+#create another file nic.tf copy from line 13 till 26
+  resource "azurerm_network_interface" "web_nic" {
+    for_each = var.subnets
+  name                = "nic-${each.key}"
+  location            = azurerm_resource_group.myrg.location
+  resource_group_name = azurerm_resource_group.myrg.name
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.web_subnet[each.key].id
+    private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.web_pip[each.key].id
+  }
+    tags                = local.project_tags
+}
+
+##exercise
+  1. do terraform apply and go inside your resource group you will see there are two nic card and two public ip
+  2. go to map-object-az.tf file remove the subnet2 once you remove the subnet2 do terraform apply
+  3. go to azure portal click on vnet check how many subnet are there check how many nic card is there check how many public ip is there. 

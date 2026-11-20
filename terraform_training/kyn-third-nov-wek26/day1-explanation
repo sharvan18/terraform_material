@@ -1,0 +1,142 @@
+Provision Azure Infrastructure using Terraform
+The design explains how to provision an Azure Resource Group and Virtual Network using Terraform Infrastructure as Code (IaC).
+1. Understand the Terraform code
+Your configuration contains three major parts:
+1. Terraform block – Defines the required provider and its version.
+2. Provider block – Configures Terraform to communicate with Microsoft Azure.
+3. Resource blocks – Define the Azure infrastructure to create.
+Corrected main.tf
+Your original code is correct conceptually. However, add a newline between the provider block and resource blocks.
+
+# 1. Terraform configuration
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=5.0.0"
+    }
+  }
+}
+
+# 2. Azure provider configuration
+provider "azurerm" {
+  features {}
+}
+
+# 3. Create Resource Group
+resource "azurerm_resource_group" "myrg" {
+  name     = "gopal-terraform-rg"
+  location = "eastus"
+}
+
+# 4. Create Virtual Network
+resource "azurerm_virtual_network" "vnet" {
+  name                = "gopal-terraform-vnet"
+  location            = azurerm_resource_group.myrg.location
+  resource_group_name = azurerm_resource_group.myrg.name
+  address_space       = ["10.0.0.0/16"]
+}
+
+
+
+2. Explanation of Terraform concepts
+Concept	Explanation
+terraform	Defines Terraform configuration requirements.
+required_providers	Specifies which provider Terraform needs.
+azurerm	Azure Resource Manager provider.
+version	Pins provider version to 5.0.0.
+provider	Configures Azure connectivity.
+resource	Declares infrastructure to provision.
+myrg	Terraform's local reference name for the resource group.
+vnet	Terraform's local reference name for the virtual network.
+
+Understanding resource references
+Consider this line:
+location = azurerm_resource_group.myrg.location
+
+
+The syntax is:
+resource_type.resource_local_name.attribute
+
+
+In this example:
+- azurerm_resource_group – Resource type.
+- myrg – Local Terraform resource name.
+- location – Attribute being referenced.
+Why use references?
+
+Terraform automatically understands that the Virtual Network depends on the Resource Group. It creates the Resource Group first and then the Virtual Network.
+3. Terraform workflow
+Terraform Infrastructure Lifecycle
+1. Write
+   
+   Create main.tf and define the Azure infrastructure.
+2. Initialize
+   terraform init
+   
+   
+   Downloads the Azure provider and initializes the working directory.
+3. Validate and Plan
+   terraform validate
+   terraform plan
+   
+   
+   Checks configuration syntax and previews infrastructure changes.
+4. Apply
+   terraform apply
+   
+   
+   Provisions the Resource Group and VNet in Azure.
+5. Verify
+   terraform show
+   
+   
+   Check the resources in Terraform state and Azure Portal.
+6. Manage
+   terraform plan
+   terraform apply
+   
+   
+   Update infrastructure when configuration changes. Use terraform destroy only when you intentionally want to remove managed resources.
+
+4. Expected Azure architecture
+Microsoft Azure Subscription
+
+Resource Group: gopal-terraform-rg
+
+Location: East US
+Virtual Network
+
+gopal-terraform-vnet
+
+Address space: 10.0.0.0/16
+
+
+
+5. Important commands for students
+Command	Purpose
+terraform init	Initialize Terraform
+terraform fmt	Format configuration
+terraform validate	Validate configuration
+terraform plan	Preview changes
+terraform apply	Deploy infrastructure
+terraform show	View current state
+terraform state list	List managed resources
+terraform destroy	Destroy managed resources
+
+Trainer's key takeaway: Terraform is declarative. You describe the desired infrastructure, and Terraform calculates the actions needed to achieve that state.
+
+One important production practice: use remote state storage with locking, protect state files because they may contain sensitive information, and pin provider versions consistently.
+
+
+
+
+
+
+
+
+
+
+
+
+Is this conversation helpful so far?

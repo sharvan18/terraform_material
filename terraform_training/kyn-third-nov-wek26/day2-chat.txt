@@ -1,0 +1,301 @@
+2026-11-17 09:36:11 From Amit Tiwari to Everyone:
+	Logged In
+	
+2026-11-17 09:36:33 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 09:36:38 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 09:36:49 From Ganapati Bhat to Everyone:
+	done
+	
+2026-11-17 09:37:40 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 10:04:30 From Gopal Das to Everyone:
+	terraform apply --auto-approve
+	
+2026-11-17 10:04:45 From Gopal Das to Everyone:
+	terraform destroy --auto-approve
+	
+2026-11-17 10:12:20 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-variables
+	
+2026-11-17 10:17:55 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 10:18:54 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 10:19:21 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 10:20:59 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 10:23:06 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 10:26:57 From Ganapati Bhat to Everyone:
+	done
+	
+2026-11-17 10:30:07 From Ravi B to Everyone:
+	Done
+	
+2026-11-17 10:47:27 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-local
+	
+2026-11-17 10:54:21 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 10:54:28 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 10:54:37 From Ganapati Bhat to Everyone:
+	done
+	
+2026-11-17 10:55:27 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 10:55:35 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 10:56:34 From Gopal Das to Everyone:
+	11:15 tea
+	
+2026-11-17 11:00:30 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 11:19:54 From PreranaBS to Everyone:
+	yes
+	
+2026-11-17 11:19:58 From Ravi B to Everyone:
+	yes
+	
+2026-11-17 11:40:33 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-local-named-expression
+	
+2026-11-17 11:43:39 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 11:44:28 From Rohit Kumar to Everyone:
+	cone
+	
+2026-11-17 11:44:34 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 11:44:38 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 11:44:54 From Ganapati Bhat to Everyone:
+	done
+	
+2026-11-17 11:45:15 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 11:49:55 From Ravi B to Everyone:
+	done
+	
+2026-11-17 11:58:13 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-output.tf
+	
+2026-11-17 12:00:10 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 12:00:11 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 12:00:15 From Amit Tiwari to Everyone:
+	location = "eastus"
+	rgname = "dev-it-rg-kyn-amit"
+	vnet_name = "dev-it-kyn-vnet"
+	
+2026-11-17 12:00:20 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 12:00:30 From Rohit Kumar to Everyone:
+	Outputs:
+	locate = "eastus"
+	rg-name = "dev-it-rg-kyn-rohit"
+	vne-name = "dev-it-rohit-kyn-vnet"
+	PS C:\Users\rohituser\terraform>
+	
+2026-11-17 12:00:33 From VelmuruganNatarajan to Everyone:
+	Outputs:
+	
+	location = "eastus"
+	rgname = "dev-it-rg-kyn-velmurugan"
+	
+2026-11-17 12:03:25 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 12:09:33 From Ravi B to Everyone:
+	location = "eastus"
+	rgname = "ravirg"
+	vnet_name = "dev-it-kyn-vnet"
+	
+2026-11-17 12:14:55 From VelmuruganNatarajan to Everyone:
+	location = "eastus"
+	rgname = "dev-it-rg-kyn-velmurugan"
+	vnet_name = "dev-it-kyn-vnet"
+	
+2026-11-17 12:41:40 From Gopal Das to Everyone:
+	https://developer.hashicorp.com/terraform/language/meta-arguments/for_each
+	
+2026-11-17 12:55:54 From Gopal Das to Everyone:
+	2: 00 lunch
+	
+2026-11-17 14:02:32 From Ravi B to Everyone:
+	back
+	
+2026-11-17 14:23:23 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-object-varaible-with-for-loop%20subnet
+	
+2026-11-17 14:26:04 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 14:29:24 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-17 14:29:51 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-17 14:30:20 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 14:30:49 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 14:31:08 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 14:32:56 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 14:50:23 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-nsg
+	
+2026-11-17 14:51:40 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 14:51:43 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 14:52:00 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 14:52:41 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 14:54:24 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 14:56:12 From Ravi B to Everyone:
+	done
+	
+2026-11-17 14:57:18 From Gopal Das to Everyone:
+	https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/network_security_rule
+	
+2026-11-17 15:10:52 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-nsg
+	
+2026-11-17 15:13:10 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 15:13:48 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 15:13:49 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 15:13:48 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-17 15:16:26 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 15:17:33 From Ravi B to Everyone:
+	done
+	
+2026-11-17 15:32:33 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/tree/main
+	
+2026-11-17 15:35:02 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 15:35:12 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 15:35:52 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 15:36:06 From Ravi B to Everyone:
+	done
+	
+2026-11-17 15:36:40 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 15:37:01 From Ganapati Bhat to Everyone:
+	done
+	
+2026-11-17 15:37:19 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 16:20:35 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-publicipandnic
+	
+2026-11-17 16:24:25 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 16:25:18 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-17 16:26:30 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 16:26:31 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 16:26:53 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 16:27:13 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-17 16:28:40 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 16:37:41 From Gopal Das to Everyone:
+	create a new file app.sh inside the file provide this content
+	
+2026-11-17 16:37:42 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/app.sh
+	
+2026-11-17 16:41:01 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day2-generate-ssh-keys
+	
+2026-11-17 16:41:52 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-17 16:41:56 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-17 16:41:59 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-17 16:42:32 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-17 16:42:49 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-17 16:43:03 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-17 16:47:46 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-17 16:50:15 From Ravi B to Everyone:
+	done
+	

@@ -1,0 +1,102 @@
+#first we will disable the public ip go to the file publicip.tf at the starting put /*  and end  */
+  #second we will disable the win-vm.tf file at the starting put /*  and end  */
+  #third we will remove the comment from vm.tf by removing /* from the first line and end line */
+  #fourth we will go to nic.tf file and in ip configuration in front of public ip we will put #
+  #firth we are going to create two instances in map-object-az.tf file delete everything we will add second subnet so that it will create two subnet and two instances copy from line 6 till 25
+  variable "subnets" { #student db
+  description = "configuration for azure subnets"
+  type = map(object({
+    name              = string
+    address_prefix    = list(string)
+    availability_zone = string
+  }))
+  default = {
+    "subnet1" = { #student1
+      name              = "web-subnet-az1"
+      address_prefix    = ["10.0.1.0/24"]
+      availability_zone = "1"
+    }
+    "subnet2" = { #student2
+      name              = "web-subnet-az2"
+      address_prefix    = ["10.0.2.0/24"]
+      availability_zone = "2"
+    }
+  }
+}
+#sixth we will disable the output of public ip go to multi-output.tf file put a /* at the starting and */ at the end 
+  #seventh we will do terraform apply which will create two instances
+  #go to the azure portal go inside your resource group you wills see two instance click on the instances you will see none of the the instance are having public ip
+#lets create the lb
+#create a new file lb.tf 
+#publicip for lb copy from line 32 till 62
+resource "azurerm_public_ip" "web_pip" {
+  
+  name                 = "${local.resource_name_prefix}-lbpublicip"
+  resource_group_name  = azurerm_resource_group.myrg.name
+    location            = azurerm_resource_group.myrg.location
+  allocation_method    = "Static"
+  sku                  = "Standard"
+  tags = local.project_tags
+}
+#we are displaying the public ip address of the load balancer in the output.tf file. This is useful for testing and verification purposes. The output will be displayed after the terraform apply command is executed.
+output "lb_public_ip" {
+  value = azurerm_public_ip.web_pip.ip_address
+}
+
+#we will create the lb
+resource "azurerm_lb" "weblb" {
+ name                 = "${local.resource_name_prefix}-lb"
+  resource_group_name  = azurerm_resource_group.myrg.name
+    location            = azurerm_resource_group.myrg.location
+
+  frontend_ip_configuration {
+    name                 = "PublicIPAddress"
+    public_ip_address_id = azurerm_public_ip.web_pip.id
+  }
+}
+
+#we need to create backend address pool for the lb 
+resource "azurerm_lb_backend_address_pool" "lb_backend_pool" {
+  loadbalancer_id = azurerm_lb.weblb.id
+  name            = "BackEndAddressPool"
+}
+
+#then do terraform apply 
+#check that inside your resource group a lb has been created click on the lb you will se frontendip which is the publci ip
+##expand setting of your lb you will see the bakcend pool click on it is showing empty
+
+#lets create the health probe for the lb inside the same file lb.tf paste the below content from 69 till 98
+resource "azurerm_lb_probe" "lb_health_probe" {
+  loadbalancer_id = azurerm_lb.weblb.id
+  name            = "HealthProbe"
+  protocol        = "Tcp"
+  port            = 80 #in instance port number 80
+  #protocol       = "Http"
+  #path            = "/var/www/html/index.html" #this is the path of the health probe. This is the
+  interval_in_seconds = 30 #every 30 second it will check health of your instance in port 80
+  number_of_probes    = 2 #if any of the instance do not respond in 1 min it will make that instance unhealthy and it will not send traffic to that instance. It will send traffic to the healthy instance.
+}
+
+#rules for the lb
+resource "azurerm_lb_rule" "lb_rule" {
+    loadbalancer_id            = azurerm_lb.weblb.id
+    name                       = "HTTPRule"
+    protocol                   = "Tcp"
+    frontend_port              = 80 #lb frontend port number 80 443
+    backend_port               = 80 #application respond if it is tomcat
+    frontend_ip_configuration_name = azurerm_lb.weblb.frontend_ip_configuration[0].name
+    backend_address_pool_ids    = [azurerm_lb_backend_address_pool.lb_backend_pool.id]
+    probe_id                   = azurerm_lb_probe.lb_health_probe.id
+    }
+
+    ##finally we need attach the nic card behind the pool
+    resource "azurerm_network_interface_backend_address_pool_association" "nic_backend_pool_assoc" {
+        for_each = var.subnets
+  network_interface_id    = azurerm_network_interface.web_nic[each.key].id
+  ip_configuration_name = azurerm_network_interface.web_nic[each.key].ip_configuration[0].name
+  backend_address_pool_id = azurerm_lb_backend_address_pool.lb_backend_pool.id
+}
+
+#then do terraform apply
+###go back to the lb in azure portal now refresh the backend pool you will see two instances 
+##copy the public ip which is there in your console paste it in the browser wiothought httpd you will see the test page of your instance refresh after 30 second the traffic will move to another instance

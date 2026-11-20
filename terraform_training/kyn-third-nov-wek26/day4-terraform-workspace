@@ -1,0 +1,24 @@
+#####give a command terraform workspace this will show everything
+1 terraform workspace         
+  ##this will show all the workspace you can see the default one
+  52 terraform workspace show                                                                                             
+#this will create a new workspace called as dev                                                                                         
+  54 terraform workspace new dev    
+  #this will list all your workspace need to see the pointer which will tell you are in which workspace
+  55 terraform workspace list      
+  #lets create the dev environment 
+  56 terraform apply --var-file=dev.tfvars --auto-approve    
+  #lets go to default env and create the prod env
+  57 terraform workspace select default                                                                                   
+#this will create the prod env
+  62 terraform workspace new prod                                                                                         
+  63 terraform workspace list                                                                                             
+  64 terraform apply --var-file=prod.tfvars --auto-approve        
+  #finally go to azure portal and you can see both the environment dev and prod
+  in the dev env you will see single machine in prod you will see two vms also check the ip address dev 172 prod 173
+#lets destroy the dev and prod environment
+terraform workspace select dev
+terraform destroy --auto-approve
+terraform workspace select prod
+terraform destroy --auto-approve
+

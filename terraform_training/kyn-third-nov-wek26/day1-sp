@@ -1,0 +1,54 @@
+#create a new file resource.tf copy from line 2 till 5 also change my name to your name in line 3
+  resource "azurerm_resource_group" "myrg" {
+  name     = "gopal-terraform-rg"
+  location = "eastus"
+}
+
+#then in the terminal run a command 
+  terraform validate
+  terraform plan
+  #terraform plan will give error as we cannot communicate due to auth issue
+  ##lets create our service principal in azure portal new copilot you will see a cloud shell then click on bash no storage account select your subscriptn and ok this will open cloud shell
+  ###in azure portal you will get the subscription id you need to replace the same here also 
+  az ad sp create-for-rbac -n "gopalSP" --role contributor --scope /subscriptions/def2cf32-c635-4684-ad00-5703dbddbe44 
+  ##once you got the service principal you need to arrange the same as environment varaible to be pass in powershell
+  $env:ARM_CLIENT_ID = "" 
+  $env:ARM_CLIENT_SECRET = "" 
+  $env:ARM_TENANT_ID = "" 
+  $env:ARM_SUBSCRIPTION_ID = "" 
+
+
+    #fyki
+  ### clientid==appid
+  clientsecret=password 
+  tenantid 
+  subscriptionid 
+
+##once you paste all this 4 environment varaibles
+  terraform validate
+  terraform plan 
+  
+  #fyki
+  ### clientid==appid
+  clientsecret=password 
+  tenantid 
+  subscriptionid 
+#lets create the resource 
+terraform apply
+###which will ask for yes it will accept only yes
+##3once crated go to azure portal search for resource group 
+
+#create a new file vnet.tf copy from line 42 till 48
+resource "azurerm_virtual_network" "vnet" {
+  name                = "gopal-terraform-vnet"
+  location            = azurerm_resource_group.myrg.location
+  resource_group_name = azurerm_resource_group.myrg.name
+  address_space       = ["10.0.0.0/16"]
+  
+}
+
+####then in terminal do
+terraform validate 
+terraform plan
+terraform apply
+####once applied complete go to azure portal inside your resource group u will fin the vnet

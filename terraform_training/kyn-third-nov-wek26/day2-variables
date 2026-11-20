@@ -1,0 +1,30 @@
+#first in the terminal copy paste the env value from notepad 
+  #second run terraform destroy
+#lets create a new file generic-varaibles.tf copy from line 4 till 26 and in line 7 change my name to your name 
+  variable "resource_group_name" {
+  description = "this is the name of the resource group"
+  type = string
+  default = "rg-kyn-gopal"
+}
+
+variable "location" {
+  description = "this is the location of the resource group"
+  type = string
+  default = "eastus"
+}
+
+variable "environment" {
+  description = "this is the name of the environment"
+  type = string
+  default = "dev"
+}
+
+variable "business_unit" {
+  description = "this is the name of the business unit"
+  type = string
+  default = "it"
+}
+
+##then go to resource.tf file 
+  1. exercise name and location is fixed with some value we need to call them using variables
+  2. so change the name value to variables

@@ -1,0 +1,238 @@
+2026-11-16 09:40:09 From Gopal Das to Everyone:
+	https://docs.google.com/spreadsheets/d/1ztoUnYocYzPM85mXC3OLeNGVbOpkIIhn/edit?usp=sharing&ouid=111571114165174089785&rtpof=true&sd=true
+	
+2026-11-16 09:40:16 From VelmuruganNatarajan to Everyone:
+	GM
+	
+2026-11-16 09:40:38 From Gopal Das to Everyone:
+	https://docs.google.com/spreadsheets/d/1ztoUnYocYzPM85mXC3OLeNGVbOpkIIhn/edit?usp=sharing&ouid=111571114165174089785&rtpof=true&sd=true
+	
+2026-11-16 09:43:23 From Afrah Ayub to Everyone:
+	Done
+	
+2026-11-16 09:44:29 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-16 09:44:45 From Tanishi Gahtori to Everyone:
+	Done
+	
+2026-11-16 09:45:20 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-16 09:46:15 From VelmuruganNatarajan to Everyone:
+	Done
+	
+2026-11-16 09:48:17 From Ravi B to Everyone:
+	done
+	
+2026-11-16 09:53:55 From Rohit Kumar to Everyone:
+	same error for me,not able to scan
+	
+2026-11-16 09:59:18 From Gopal Das to Everyone:
+	https://docs.google.com/spreadsheets/d/1ztoUnYocYzPM85mXC3OLeNGVbOpkIIhn/edit?usp=sharing&ouid=111571114165174089785&rtpof=true&sd=true
+	
+2026-11-16 10:01:40 From PreranaBS to Everyone:
+	done
+	
+2026-11-16 10:08:00 From supritha to Everyone:
+	Hi all 
+	Good morning 
+	I’m Supritha , working as infrastructure specialist in dell powerflex . 
+	
+	Have issue with mice , Not able to unmute
+	
+2026-11-16 10:14:51 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-terraform-azure-documentation
+	
+2026-11-16 10:55:53 From Gopal Das to Everyone:
+	11:15
+	
+2026-11-16 10:55:57 From Gopal Das to Everyone:
+	lunch 1 to 2
+	
+2026-11-16 10:56:06 From Gopal Das to Everyone:
+	3:45
+	
+2026-11-16 10:56:14 From Gopal Das to Everyone:
+	tea till 11:15
+	
+2026-11-16 11:22:02 From VelmuruganNatarajan to Everyone:
+	back
+	
+2026-11-16 11:44:15 From Gopal Das to Everyone:
+	win
+	
+2026-11-16 11:58:43 From Amit Tiwari to Everyone:
+	Done for me
+	
+2026-11-16 11:59:00 From Ravi B to Everyone:
+	Done
+	
+2026-11-16 12:01:20 From Gopal Das to Everyone:
+	rdp
+	
+2026-11-16 12:01:53 From Ravi B to Everyone:
+	RDP Done
+	
+2026-11-16 12:01:54 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-16 12:01:56 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-16 12:02:01 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-16 12:02:15 From PreranaBS to Everyone:
+	done
+	
+2026-11-16 12:03:35 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-16 12:07:04 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-16 12:07:06 From Tanishi Gahtori to Everyone:
+	yes done
+	
+2026-11-16 12:07:06 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-16 12:13:39 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/tree/main
+	
+2026-11-16 12:22:15 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-16 12:23:45 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-16 12:24:13 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-16 12:24:18 From Afrah Ayub to Everyone:
+	Done
+	
+2026-11-16 12:24:26 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-16 12:27:18 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-16 12:27:47 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-16 12:29:27 From Gopal Das to Everyone:
+	https://developer.hashicorp.com/terraform/install
+	
+2026-11-16 13:02:44 From Gopal Das to Everyone:
+	lunch till 2:00
+	
+2026-11-16 14:32:49 From Gopal Das to Everyone:
+	https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+	
+2026-11-16 14:42:04 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day1-provider.tf
+	
+2026-11-16 14:42:41 From Tanishi Gahtori to Everyone:
+	Done
+	
+2026-11-16 14:44:00 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-16 14:45:19 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-16 14:46:10 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-16 14:46:25 From Ravi B to Everyone:
+	done
+	
+2026-11-16 14:47:18 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-16 14:58:06 From Gopal Das to Everyone:
+	https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group
+	
+2026-11-16 15:14:26 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-16 15:15:03 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day1-sp
+	
+2026-11-16 15:21:04 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-16 15:21:21 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-16 15:25:20 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-16 15:26:06 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-16 15:26:13 From Rohit Kumar to Everyone:
+	resource group created
+	
+2026-11-16 15:26:39 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-16 15:28:04 From Ravi B to Everyone:
+	done
+	
+2026-11-16 15:38:18 From Gopal Das to Everyone:
+	terraform destroy
+	
+2026-11-16 15:39:19 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-16 15:40:02 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-16 15:40:54 From Ravi B to Everyone:
+	done
+	
+2026-11-16 15:45:11 From Gopal Das to Everyone:
+	"=5.0.0"
+	
+2026-11-16 15:47:40 From Gopal Das to Everyone:
+	4:10
+	
+2026-11-16 15:47:50 From Gopal Das to Everyone:
+	tea till 4:10
+	
+2026-11-16 16:33:48 From Gopal Das to Everyone:
+	https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network
+	
+2026-11-16 16:42:30 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day1-sp
+	
+2026-11-16 16:45:07 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-16 16:45:12 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-16 16:45:13 From Amit Tiwari to Everyone:
+	Created
+	
+2026-11-16 16:45:17 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-16 16:45:17 From Afrah Ayub to Everyone:
+	created
+	
+2026-11-16 16:45:48 From Rohit Kumar to Everyone:
+	vnet created
+	
+2026-11-16 16:46:51 From Ganapati Bhat to Everyone:
+	done
+	
+2026-11-16 16:50:37 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-16 16:51:59 From RaviB to Everyone:
+	done
+	

@@ -1,0 +1,19 @@
+##inside the local-use-case.tf file delete everything and add this from line 2 till 13
+  locals {
+  #we will define user defined key
+  #when you want to concatinate multiple varaibles together you need to put it inside double quote
+  #all the varaibles start with a $ symbol and the varaible should be inside squid bracket
+  resource_name_prefix = "${var.environment}-${var.business_unit}"
+  #dev-it
+  project_tags = { #if i called project_tags it will give me the below output
+    environment   = var.environment #dev
+    business_unit = var.business_unit #it
+    Project       = "kyn" 
+  }
+}
+
+##now to resource.tf file at the end before the curly braces end add the below line 
+   tags     = local.project_tags
+  #go to vnet.tf file before the curly braces end add the below line
+   tags     = local.project_tags
+###finally do terraform apply and go to azure portal in resource group and vnet similar tag will be there

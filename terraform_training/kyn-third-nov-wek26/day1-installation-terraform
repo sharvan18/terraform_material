@@ -1,0 +1,13 @@
+####we will install terraform and all the package do it inside your rdp 
+  #choco package manager in windows
+  #we will install choco package manager#open powershell in admin mode after this copy paste the 4 line as it is 
+  Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+  ##once installation complete close the powershell and restart the powershell in admin mode
+  refreshenv
+  choco install terraform -y
+  choco install git -y
+  choco install vscode -y
+  choco install azure-cli -y
+  #once you install the packages closes the powershell and start again in non admin mode
+  az --version
+  ##for visual studio code you will see the same in your desktop

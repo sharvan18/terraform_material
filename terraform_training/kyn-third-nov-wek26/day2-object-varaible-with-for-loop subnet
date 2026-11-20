@@ -1,0 +1,35 @@
+#create a new file map-object-az.tf copy from line 2 till 22
+  variable "subnets" { #student db
+  description = "configuration for azure subnets"
+  type = map(object({
+    name = string
+    address_prefix = list(string)
+    availability_zone = string 
+  }))
+  default = {
+    "subnet1" = { #student1
+      name = "web-subnet-az1"
+      address_prefix = [ "10.0.1.0/24" ]
+      availability_zone = "1"
+    }
+     "subnet2" = { #student2
+      name = "web-subnet-az2"
+      address_prefix = [ "10.0.2.0/24" ]
+      availability_zone = "2"
+    }
+     
+  }
+}
+
+#create a new file subnet.tf copy from line 25 till 31
+  resource "azurerm_subnet" "web_subnet" {
+    for_each = var.subnets 
+  name                 = each.value.name
+  resource_group_name  = azurerm_resource_group.myrg.name
+  virtual_network_name = azurerm_virtual_network.vnet.name
+  address_prefixes     = each.value.address_prefix
+}
+#exercise
+  1. terraform apply and check two subnet is created under vnet
+  2. add a new subnet3 in map-object-az.tf file and do terraform apply see that third subnet is created or not check it in azure portal
+  3. now remove the subnet3 from map-object-az.tf file and do terraform see that the third subnet is removed or not

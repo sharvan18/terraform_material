@@ -1,0 +1,33 @@
+##go to map-object-az.tf delete every thing and add this this will create three subnet and three instance also copy from line 2 till 26
+  variable "subnets" { #student db
+  description = "configuration for azure subnets"
+  type = map(object({
+    name              = string
+    address_prefix    = list(string)
+    availability_zone = string
+  }))
+  default = {
+    "subnet1" = { #student1
+      name              = "web-subnet-az1"
+      address_prefix    = ["10.0.1.0/24"]
+      availability_zone = "1"
+    }
+    "subnet2" = { #student2
+      name              = "web-subnet-az2"
+      address_prefix    = ["10.0.2.0/24"]
+      availability_zone = "2"
+    }
+    "subnet3" = { #student3
+      name              = "web-subnet-az3"
+      address_prefix    = ["10.0.3.0/24"]
+      availability_zone = "3"
+    }
+  }
+}
+
+#after this if you do git status it will show the map-object-az.tf file is modified
+  git status
+  git add .
+  git commit -m "added another instance"
+  git push origin --all
+  ##once you push the code refresh the terraform cloud you will see it is running

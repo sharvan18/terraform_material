@@ -1,0 +1,19 @@
+##create a new output file called as multi-output.tf copy from line 2 till 17
+output "instance_network_details" {
+  value = {
+    for key, pip  in azurerm_public_ip.web_pip :
+    key => pip.ip_address
+  }
+}
+
+output "instance_network_internal_details" {
+  value = {
+    for key, nic  in azurerm_network_interface.web_nic : key => {
+        nic_name = nic.name
+        nic_id = nic.id
+
+    }
+  }
+}
+###then do terraform apply this will show the output of multiple public ip
+#exercise after line use the above any of the output block and display the private ip address

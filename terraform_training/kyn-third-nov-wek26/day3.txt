@@ -1,0 +1,291 @@
+2026-11-18 09:43:12 From Amit Tiwari to Everyone:
+	Working
+	
+2026-11-18 10:13:44 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day3-for-output-todisplay-multipeleoutput
+	
+2026-11-18 10:17:54 From Rohit Kumar to Everyone:
+	Outputs:
+	instance_network_details = {
+	  "subnet1" = "4.227.248.190"
+	  "subnet2" = "52.142.7.99"
+	}
+	instance_network_internal_details = {
+	  "subnet1" = {
+	    "nic_id" = "/subscriptions/73cbb2ca-6092-4ae4-9e58-362b625a3b20/resourceGroups/dev-it-rg-kyn-rohit/providers/Microsoft.Network/networkInterfaces/nic-subnet1"
+	    "nic_name" = "nic-subnet1"
+	    "pvt_ip" = "10.0.1.4"
+	  }
+	  "subnet2" = {
+	    "nic_id" = "/subscriptions/73cbb2ca-6092-4ae4-9e58-362b625a3b20/resourceGroups/dev-it-rg-kyn-rohit/providers/Microsoft.Network/networkInterfaces/nic-subnet2"
+	    "nic_name" = "nic-subnet2"
+	    "pvt_ip" = "10.0.2.4"
+	  }
+	}
+	
+2026-11-18 10:18:31 From Ganapati Bhat to Everyone:
+	instance_network_private_ips = {
+	  "subnet1" = "10.0.1.4"
+	  "subnet3" = "10.0.3.4"
+	
+2026-11-18 10:20:40 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 10:20:41 From Amit Tiwari to Everyone:
+	Outputs:
+	instance_network_details = {
+	  "subnet1" = "20.127.14.249"
+	}
+	instance_network_internal_details = {
+	  "subnet1" = {
+	    "nic_id" = "/subscriptions/73cbb2ca-6092-4ae4-9e58-362b625a3b20/resourceGroups/dev-it-rg-kyn-amit/providers/Microsoft.Network/networkInterfaces/nic-subnet1"
+	    "nic_name" = "nic-subnet1"
+	  }
+	}
+	location = "eastus"
+	nic_private_ip_addresses = {
+	  "subnet1" = "10.0.1.4"
+	}
+	rgname = "dev-it-rg-kyn-amit"
+	vnet_name = "dev-it-kyn-vnet"
+	PS C:\Users\azureuser\Desktop\tf-project>
+	
+2026-11-18 10:21:41 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 10:23:58 From Ravi B to Everyone:
+	utputs:
+	instance_network_details = {
+	  "subnet1" = "20.25.68.92"
+	  "subnet2" = "172.174.38.46"
+	}
+	instance_network_internal_details = {
+	  "subnet1" = {
+	    "nic_id" = "/subscriptions/73cbb2ca-6092-4ae4-9e58-362b625a3b20/resourceGroups/ravirg/providers/Microsoft.Network/networkInterfaces/nic-subnet1"
+	    "nic_name" = "nic-subnet1"
+	  }
+	  "subnet2" = {
+	    "nic_id" = "/subscriptions/73cbb2ca-6092-4ae4-9e58-362b625a3b20/resourceGroups/ravirg/providers/Microsoft.Network/networkInterfaces/nic-subnet2"
+	    "nic_name" = "nic-subnet2"
+	  }
+	}
+	location = "eastus"
+	rgname = "ravirg"
+	vnet_name = "dev-it-kyn-vnet"
+	
+2026-11-18 10:24:56 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-18 10:29:18 From Gopal Das to Everyone:
+	https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine
+	
+2026-11-18 10:55:12 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day3-vm.tf
+	
+2026-11-18 11:02:37 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 11:05:12 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 11:05:19 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-18 11:05:29 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-18 11:07:50 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/app.sh
+	
+2026-11-18 11:14:19 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-18 11:15:21 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-18 11:16:23 From SARAVANAN PONNAIAH to Everyone:
+	Done
+	
+2026-11-18 11:17:55 From Gopal Das to Everyone:
+	11:40
+	
+2026-11-18 12:08:09 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day3-win
+	
+2026-11-18 12:31:45 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-18 12:33:36 From Rohit Kumar to Everyone:
+	for_each             = var.subnets
+	  name           = "windows-vm-rohit-${each.key}"
+	  computer_name  = "win-${each.key}"
+	
+2026-11-18 12:36:52 From Rohit Kumar to Everyone:
+	PS C:\Users\adminuser> ho
+	win-subnet1
+	PS C:\Users\adminuser>
+	
+	computer name we can see in powershell of new created windows vm
+	
+2026-11-18 12:39:44 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-18 12:42:35 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-18 12:43:36 From Amit Tiwari to Everyone:
+	computer_name       = "win-vm"
+	
+2026-11-18 12:48:29 From Ravi B to Everyone:
+	done
+	
+2026-11-18 12:50:33 From Gopal Das to Everyone:
+	lunch till 2:00
+	
+2026-11-18 12:50:39 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-18 14:28:24 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day3-lb
+	
+2026-11-18 14:30:47 From Rohit Kumar to Everyone:
+	Done
+	
+2026-11-18 14:35:08 From Tanishi Gahtori to Everyone:
+	Done
+	
+2026-11-18 14:35:40 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-18 14:36:51 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 14:37:05 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-18 14:38:28 From Ravi B to Everyone:
+	Done
+	
+2026-11-18 14:38:34 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-18 14:40:25 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 15:02:29 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day3-lb
+	
+2026-11-18 15:04:53 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-18 15:05:07 From Tanishi Gahtori to Everyone:
+	Done
+	
+2026-11-18 15:05:43 From Rohit Kumar to Everyone:
+	Done
+	
+2026-11-18 15:05:53 From SARAVANAN PONNAIAH to Everyone:
+	done
+	
+2026-11-18 15:06:01 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-18 15:06:26 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 15:06:46 From Ravi B to Everyone:
+	done
+	
+2026-11-18 15:07:09 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 15:22:10 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day3-lb
+	
+2026-11-18 15:25:18 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-18 15:25:19 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 15:26:06 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-18 15:26:23 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 15:27:10 From Ravi B to Everyone:
+	done
+	
+2026-11-18 15:29:30 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-18 15:36:19 From Gopal Das to Everyone:
+	4:00 clocl
+	
+2026-11-18 16:36:44 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-terraform-azure-documentation/tree/master/24-Terraform-Remote-State-Storage
+	
+2026-11-18 16:37:45 From Gopal Das to Everyone:
+	gopal-terraform-storage
+	
+2026-11-18 16:38:33 From Gopal Das to Everyone:
+	terraformstoragegopal
+	
+2026-11-18 16:39:44 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-18 16:39:51 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-18 16:41:24 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 16:44:13 From Ravi B to Everyone:
+	done
+	
+2026-11-18 16:44:18 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-18 16:44:38 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 16:46:02 From Gopal Das to Everyone:
+	tfstate
+	
+2026-11-18 16:46:29 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 16:46:38 From Amit Tiwari to Everyone:
+	Done
+	
+2026-11-18 16:46:48 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-18 16:46:51 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 16:47:55 From Ravi B to Everyone:
+	done
+	
+2026-11-18 16:53:19 From Gopal Das to Everyone:
+	https://github.com/gopal1409/kyn-third-nov-wek26/blob/main/day3-state-file
+	
+2026-11-18 16:59:45 From Rohit Kumar to Everyone:
+	done
+	
+2026-11-18 17:03:00 From Tanishi Gahtori to Everyone:
+	done
+	
+2026-11-18 17:03:32 From Afrah Ayub to Everyone:
+	done
+	
+2026-11-18 17:04:01 From Ganapati Bhat to Everyone:
+	Done
+	
+2026-11-18 17:08:35 From VelmuruganNatarajan to Everyone:
+	done
+	
+2026-11-18 17:09:42 From Amit Tiwari to Everyone:
+	Done
+	

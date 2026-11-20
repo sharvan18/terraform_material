@@ -1,0 +1,67 @@
+#create a new file dev.tfvars copy from line 2 till 15
+  resource_group_name = "rg-kyn-gopal"
+location = "eastus"
+environment = "dev"
+business_unit = "sap"
+vnet_name = "kyn-vnet"
+vnet_address_space = ["172.16.0.0/16"]
+
+subnets = { #student db
+    "subnet1" = { #student1
+      name              = "web-subnet-az1"
+      address_prefix    = ["172.16.1.0/24"]
+      availability_zone = "1"
+    }
+}
+
+#create a new file prod.tfvars copy from line 18 till 36
+  resource_group_name = "rg-kyn-gopal"
+location = "eastus"
+environment = "prod"
+business_unit = "sap"
+vnet_name = "kyn-vnet"
+vnet_address_space = ["173.16.0.0/16"]
+
+subnets = { #student db
+    "subnet1" = { #student1
+      name              = "web-subnet-az1"
+      address_prefix    = ["173.16.1.0/24"]
+      availability_zone = "1"
+    }
+    "subnet2" = { #student2
+      name              = "web-subnet-az2"
+      address_prefix    = ["173.16.2.0/24"]
+      availability_zone = "2"
+    }
+}
+
+#go to provider.tf delete everything and add this from line 39 till 53
+#####inside provide.tf file delete everthing and add this from line 6 till 38
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=5.0.0" #important for production environment
+    }
+  }
+}
+
+# Configure the Microsoft Azure Provider
+provider "azurerm" {
+  features {}
+
+}
+
+
+#if you want to overwrite the default value
+  terraform plan --var-file=dev.tfvars 
+  1. see the planner you will see the default ip address is 10 series change to 172 serier and once instance will be there
+    terraform plan --var-file=prod.tfvars
+  2. see the planner you will see the default ip address is 10 series change to 173 series
+  #lets do terraform apply with dev and prod environment
+   terraform apply --var-file=dev.tfvars 
+##then apply it using 
+     terraform apply --var-file=prod.tfvars 
+  #this will show in the planner it is going to create but befre that the dev environment to be delete dont apply it just check the planner
+
+  

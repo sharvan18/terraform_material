@@ -1,0 +1,12 @@
+##inside the backend.tf file change the key to projectx.tfstate
+  ##then try to do terraform apply it will give you mirgration error lets migrate the sate file
+terraform init -migrate-state                                                                                        
+terraform init -reconfigure 
+  #once migrate do terraform apply once apply complete go to your storage account in azure expand setting click on contianer you will see a new state file with the name of projectx.tfstate
+
+  ##lets lock the state file clock on the projectx.tfstate at the top you will find acquire lease click on the same
+  ##now try to do terraform apply or terraform destroy it will show state file is locked
+  ##then click on release lock and do terraform destroy now it will work. 
+  ###this are few more command for unlocking or locking
+  terraform force-unlock <Lock ID>
+  terraform apply -lock-timeout=5m

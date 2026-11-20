@@ -1,0 +1,38 @@
+#create a new file nsg.tf copy from line 3 till 14 
+  #we will create an nsg
+resource "azurerm_network_security_group" "web_nsg" {
+  name                = "${local.resource_name_prefix}-nsg" #this is the name of the virtual network
+  location            = azurerm_resource_group.myrg.location
+  resource_group_name = azurerm_resource_group.myrg.name
+  
+}
+#associate with subnet 
+resource "azurerm_subnet_network_security_group_association" "web_nsg_assoc" {
+  for_each = azurerm_subnet.web_subnet
+  subnet_id                 = each.value.id
+  network_security_group_id = azurerm_network_security_group.web_nsg.id
+}
+
+#using local block and for each we are going to open port 22 80 and 443 add this line inside nsg.tf extreme below and do terraform apply copy from line 18 till 38
+
+locals {
+    web_nsg_rule = { #web_nsg_rule it is the name 
+        "110" : "22", #priority and port number are expressed in key value pair
+        "120" : "80",
+        "140" : "443"
+    }
+}
+resource "azurerm_network_security_rule" "web_nsg_rule" {
+  for_each = local.web_nsg_rule
+  name                        = "Rule_port_${each.value}" #Rule_port_22, Rule_port_80, Rule_port_443
+  priority                    = each.key #110, 120, 140
+  direction                   = "Inbound"
+  access                      = "Allow"
+  protocol                    = "Tcp"
+  source_port_range           = "*" 
+  destination_port_range      = each.value #22, 80, 443
+  source_address_prefix       = "*"
+  destination_address_prefix  = "*"
+  resource_group_name         = azurerm_resource_group.myrg.name
+  network_security_group_name = azurerm_network_security_group.web_nsg.name
+}

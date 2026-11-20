@@ -1,0 +1,38 @@
+#first do terraform destroy
+  create a local-use-case.tf file copy from line 3 till 9
+  locals {
+  #we will define user defined key
+  #when you want to concatinate multiple varaibles together you need to put it inside double quote
+  #all the varaibles start with a $ symbol and the varaible should be inside squid bracket
+  resource_name_prefix = "${var.environment}-${var.business_unit}"
+  #dev-it
+}
+##inside the resource.tf file delete everything and add this from line 11 to 14
+  resource "azurerm_resource_group" "myrg" { #it is an refrence to the block 
+  name     = "${local.resource_name_prefix}-${var.resource_group_name}" #this is the name of the resource group
+  location = var.location
+}
+
+##inside vnet.tf delete everything and add this from line 17 till 24
+  resource "azurerm_virtual_network" "vnet" {
+
+  name                = "${local.resource_name_prefix}-${var.vnet_name}" #this is the name of the virtual network
+  location            = azurerm_resource_group.myrg.location
+  resource_group_name = azurerm_resource_group.myrg.name
+  address_space       = var.vnet_address_space
+
+}
+#create a new file network.tf copy from line 26 till 34
+variable "vnet_name" {
+  type = string 
+  default = "kyn-vnet"
+}
+
+variable "vnet_address_space" {
+  type = list(string)
+  default = ["10.0.0.0/16"]
+}
+
+
+###then do terraform apply 
+  #exercise 1: once applied complete go to azure portal check that the name of the resource group and vnet name has a prefix of dev-it

@@ -1,0 +1,20 @@
+###go to terraform workspace default
+  terraform apply
+  ###the resources will be created 
+  ##then go to your dev resource group
+  #add a new tag
+
+  ##after adding the tag do terraform plan this will show there is an extra tag
+  ##if you do terraform apply it will remove the tag
+
+
+  ###how to ignore the tag changes 
+  #go inside resource.tf file and create a lifecycle add line 13 till 17 after the tag field in resource
+    lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
+
+
+#now again do terraform apply it will show infrastruct if matching no changes required

@@ -1,0 +1,33 @@
+terraform-azure-infrastructure/
+│
+├── modules/
+│   ├── networking/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   │
+│   ├── compute/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   ├── outputs.tf
+│   │   └── app.sh
+│   │
+│   ├── security-group/
+│   │   ├── main.tf
+│   │   ├── variables.tf
+│   │   └── outputs.tf
+│   │
+│   └── load-balancer/
+│       ├── main.tf
+│       ├── variables.tf
+│       └── outputs.tf
+│
+├── versions.tf
+├── main.tf
+├── locals.tf
+├── variables.tf
+├── outputs.tf
+├── dev.tfvars
+├── prod.tfvars
+├── README.md
+└── .gitignore
